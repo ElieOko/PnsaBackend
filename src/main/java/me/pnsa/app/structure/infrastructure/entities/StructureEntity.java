@@ -8,21 +8,20 @@ import org.springframework.data.relational.core.mapping.Table;
 import java.time.LocalDateTime;
 
 @Table("structures")
-//@Entity(name = "structures")
 public class StructureEntity {
     @Id
     @Column("id")
-    private Long id = 0L;
+    private Long id;
     @Column("user_id")
     private Long userId;
     @Column("structure_type_id")
     private Long structureTypeId;
     @Column("province_id")
-    private Long provinceId = 0L;
+    private Long provinceId;
     @Column("name")
     private String name;
     @Column("description")
-    private String description = "";
+    private String description;
     @Column("is_active")
     private Boolean isActive = true;
     @Column("latitude")

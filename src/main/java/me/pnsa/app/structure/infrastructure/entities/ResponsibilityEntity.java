@@ -2,23 +2,21 @@ package me.pnsa.app.structure.infrastructure.entities;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
-//import jakarta.persistence.*;
 import org.springframework.data.relational.core.mapping.Table;
 
 @Table("responsibilities")
-//@Entity(name = "responsibilities" )
 public class ResponsibilityEntity {
     @Id
     @Column("id")
     private Long id;
-    @Column("fullName")
+    @Column("full_name")
     private String fullName;
     @Column("functions")
     private String function;
-    @Column("structureId")
+    @Column("structure_id")
     private Long structureId;
-    @Column("isActive")
-    private Boolean isActive;
+    @Column("is_active")
+    private Boolean isActive = Boolean.TRUE;
 
     public void setFullName(String fullName) {this.fullName = fullName;}
     public void setFunction(String function) {this.function = function;}

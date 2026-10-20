@@ -2,15 +2,13 @@ package me.pnsa.app.structure.infrastructure.entities;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
-//import jakarta.persistence.*;
 import org.springframework.data.relational.core.mapping.Table;
 
-@Table("TAgendas")
-//@Entity("agendas")
+@Table("agendas")
 public class AgendaEntity {
     @Id
     @Column("id")
-    private Long agendaId = 0L;
+    private Long agendaId;
     @Column("day_id")
     private Long dayId;
     @Column("structure_id")
@@ -20,7 +18,7 @@ public class AgendaEntity {
     @Column("hour_end")
     private String hourEnd;
     @Column("is_active")
-    private Boolean isActive;
+    private Boolean isActive = Boolean.TRUE;
 
     public void setAgendaId(Long agendaId) {this.agendaId = agendaId;}
     public void setDayId(Long dayId) {this.dayId = dayId;}
