@@ -1,22 +1,18 @@
 package me.pnsa.app.structure.infrastructure.entities;
 
-//import jakarta.persistence.Column;
-//import jakarta.persistence.Entity;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
-//import jakarta.persistence.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
 @Table("services")
-//@Entity(name = "services")
 public class ServiceEntity {
     @Id
     @Column("id")
     private Long id;
     @Column("name")
     private String name;
-    @Column("isActive")
-    private Boolean isActive;
+    @Column("is_active")
+    private Boolean isActive = Boolean.TRUE;
 
     public Long getId() {return id;}
     public void setId(Long id) {

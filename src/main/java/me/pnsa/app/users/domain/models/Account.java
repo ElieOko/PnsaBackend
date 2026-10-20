@@ -2,7 +2,7 @@ package me.pnsa.app.users.domain.models;
 
 public record Account(
         Long accountId,
-        Long name,
+        String name,
         Boolean isActive
 ) {
 }
